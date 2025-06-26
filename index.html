@@ -1,0 +1,45 @@
+
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Amigas Inseparaveis</title>
+  <link rel="stylesheet" href="estilo.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=LXGW+Marker+Gothic&display=swap" rel="stylesheet">
+</head>
+<body>
+  <h1>Amigas Inseparaveis</h1>
+
+  <section id="formulario-participante">
+    <h2>Adicionar Participante (máx 24)</h2>
+    <form id="form-add-participante">
+      <input type="text" id="nome" placeholder="Nome" required />
+      <input type="text" id="ocupacao" placeholder="Ocupação" required />
+      <input type="url" id="foto" placeholder="URL da Foto" required />
+      <button type="submit">Adicionar</button>
+    </form>
+    <p id="erro-limite" style="color:red; display:none;">Máximo de 24 participantes alcançado!</p>
+  </section>
+  <button onclick="salvarPreset()">💾 Salvar Preset</button>
+  <button onclick="carregarPreset()">📂 Carregar Preset</button>
+  <button onclick="limparParticipantes()">🧹 Limpar Participantes</button>
+
+  <section id="lista-participantes">
+    <h2>Participantes</h2>
+    <div id="cards-participantes" class="grid-cards"></div>
+  </section>
+
+  <section id="episodio-container">
+    <h2>Episódio</h2>
+    
+    <div id="episodio"></div>
+    <div id="vencedor" style="font-weight:bold; font-size:1.2em; margin-top:1em;"></div>
+    <button id="botao-rodar">Rodar Episódio</button>
+  </section>
+
+  <script src="script.js"></script>
+</body>
+</html>
